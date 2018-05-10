@@ -1,0 +1,62 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Bb]uild/
+[Bb]uilds/
+[Ll]ibrary/
+[Oo]bj/
+[Tt]emp/
+Assets/AssetStoreTools*
+*.collabignore
+*.pdb.meta
+*.pidb.meta
+*.stackdump
+sysinfo.txt
+
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+*.vs/
+*.booproj
+*.consulo/
+*.csproj
+*.opendb
+*.pdb
+*.pidb
+*.sln
+*.svd
+*.suo
+*.tmp
+*.unityproj
+*.user
+*.userprefs
+
+# ============ #
+
+# OS generated #
+
+# ============ #
+
+.DS_Store
+._*
+.Spotlight-V100
+
+.Trashes
+Icon?
+
+ehthumbs.db
+
+[Tt]humbs.db
+
+[Dd]esktop.ini
+
+Corridor/Library/ShaderCache/
+Corridor/Library/metadata/
+
+# ====== #
+# Builds #
+# ====== #
+*.apk
+*.unitypackage
