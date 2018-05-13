@@ -49,8 +49,22 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public bool Skidding { get; private set; }
         public float BrakeInput { get; private set; }
-        public float CurrentSteerAngle{ get { return m_SteerAngle; }}
-        public float CurrentSpeed{ get { return m_Rigidbody.velocity.magnitude*2.23693629f; }}
+        public float CurrentSteerAngle { get { return m_SteerAngle; }}
+        public float CurrentSpeed
+        {
+            get
+            {
+                switch(m_SpeedType)
+                {
+                    case SpeedType.MPH:
+                        return m_Rigidbody.velocity.magnitude * 2.23693629f;
+                    case SpeedType.KPH:
+                        return m_Rigidbody.velocity.magnitude * 3.6f;
+                    default:
+                        return m_Rigidbody.velocity.magnitude;
+                }
+            }
+        }
         public float MaxSpeed{ get { return m_Topspeed; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
