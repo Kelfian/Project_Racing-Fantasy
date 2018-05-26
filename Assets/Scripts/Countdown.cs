@@ -1,46 +1,58 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Vehicles.Car;
+using TMPro;
 
 public class Countdown : MonoBehaviour {
 
-	public GameObject CountDown;
-	public AudioSource GetReady;
-	public AudioSource GoAudio;
-	public GameObject LapTimer;
-	public GameObject CarControls;
-	public AudioSource LevelMusic;
+	public AudioSource getReady;
+	public AudioSource goAudio;
+	public AudioSource levelMusic;
+    [SerializeField] private CarUserControl playerCarControl;
+    [SerializeField] private CarAIControl[] aiCarControl;
+    private GameObject countDown;
+	private TextMeshProUGUI countDownText;
+	private TimeManager lapTimer;
 
 	// Use this for initialization
-	void Start () {
+	private void Start ()
+    {
+        lapTimer = transform.parent.GetChild(0).GetComponent<TimeManager>();
 		StartCoroutine(CountStart());
+        countDown = transform.GetChild(0).gameObject;
+        countDownText = countDown.GetComponent<TextMeshProUGUI>();
 	}
 
 	IEnumerator CountStart(){
 		//countdown
 		yield return new WaitForSeconds (0.5f);
-		CountDown.GetComponent<Text>().text = "3";
-		CountDown.SetActive (true);
-		GetReady.Play();
+        countDownText.text = "3";
+        countDown.SetActive(true);
+		getReady.Play();
 		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		CountDown.GetComponent<Text>().text = "2";
-		CountDown.SetActive (true);
-		GetReady.Play();
+        countDown.SetActive(false);
+        countDownText.text = "2";
+        countDown.SetActive(true);
+        getReady.Play();
 		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		CountDown.GetComponent<Text>().text = "1";
-		GetReady.Play();
-		CountDown.SetActive (true);
-		yield return new WaitForSeconds (1);
-		CountDown.SetActive (false);
-		GoAudio.Play();
-		LevelMusic.Play();
+        countDown.SetActive(false);
+        countDownText.text = "1";
+		getReady.Play();
+        countDown.SetActive(true);
+        yield return new WaitForSeconds (1);
+        countDown.SetActive(false);
+        goAudio.Play();
+		yield return new WaitForSeconds (0.5f);
+		levelMusic.Play();
 		//StartLap.SetActive blabla dst
 
 		//end of time freeze
-		LapTimer.SetActive (true);
-		CarControls.SetActive (true);
-	}
+		lapTimer.enabled = true;
+        playerCarControl.enabled = true;
+        for (int i = 0; i < aiCarControl.Length; i++)
+        {
+            aiCarControl[i].enabled = true;
+        }
+    }
 }

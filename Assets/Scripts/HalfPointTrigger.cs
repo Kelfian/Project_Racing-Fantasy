@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class HalfPointTrigger : MonoBehaviour {
-
-	public GameObject LapCompleteTrig;
-	public GameObject HalfLapTrig;
-
-	void OnTriggerEnter(){
-		LapCompleteTrig.SetActive (true);
-		HalfLapTrig.SetActive (false);
+public class HalfPointTrigger : MonoBehaviour
+{
+	void OnTriggerEnter()
+    {
+		transform.parent.GetChild(0).gameObject.SetActive(true);
+		gameObject.SetActive(false);
 	}
 }
