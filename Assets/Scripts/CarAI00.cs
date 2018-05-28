@@ -12,7 +12,7 @@ public class CarAI00 : MonoBehaviour
     {
         gotoHere = transform.GetChild(0).gameObject;
         Array.Resize(ref waypoint, transform.childCount - 1);
-        for (int i = 1; i <= transform.childCount; i++)
+        for (int i = 1; i < transform.childCount; i++)
         {
             waypoint[i-1] = transform.GetChild(i);
         }
