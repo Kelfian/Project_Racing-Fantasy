@@ -1379,6 +1379,11 @@ Transform:
   m_Father: {fileID: 1180882132}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &471842541 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279,
+    type: 2}
+  m_PrefabInternal: {fileID: 876089565}
 --- !u!1 &484745079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,15 +3398,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 760
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb77949f3e402b847aae0587e635e279, type: 2}
@@ -9426,7 +9431,7 @@ MonoBehaviour:
   m_AccelWanderSpeed: 0.1
   m_BrakeCondition: 2
   m_Driving: 1
-  m_Target: {fileID: 1883304174}
+  m_Target: {fileID: 471842541}
   m_StopWhenTargetReached: 0
   m_ReachTargetThreshold: 2
 --- !u!114 &1180882130
