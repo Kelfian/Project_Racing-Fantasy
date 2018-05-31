@@ -2893,6 +2893,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 721180067}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &725026659 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1111334982170484, guid: fb77949f3e402b847aae0587e635e279,
+    type: 2}
+  m_PrefabInternal: {fileID: 876089565}
+--- !u!114 &725026663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725026659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cdeb8532e1d7848ad5ba7f1f200139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727251800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,6 +3423,14 @@ Prefab:
     - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172081271901936, guid: fb77949f3e402b847aae0587e635e279, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb77949f3e402b847aae0587e635e279, type: 2}
@@ -9375,9 +9399,9 @@ GameObject:
   - component: {fileID: 1180882130}
   - component: {fileID: 1180882129}
   - component: {fileID: 1180882128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AI-Car
-  m_TagString: Player
+  m_TagString: CarAI00
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
