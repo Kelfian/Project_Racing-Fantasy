@@ -3,9 +3,9 @@ using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
-	public static int minuteCount;
-	public static int secondCount;
-	public static float miliCount;
+    public static int minuteCount;
+    public static int secondCount;
+    public static float miliCount;
     public static float rawTime;
     public static string miliDisplay;
     private TextMeshProUGUI timeBox;
@@ -38,27 +38,5 @@ public class TimeManager : MonoBehaviour
         miliDisplay = miliCount.ToString("F0");
         //Display the time count
         timeBox.text = string.Format("{0:00}:", minuteCount) + string.Format("{0:00}.", secondCount) + miliDisplay;
-
-        //Display the Second count.
-        /*
-		if (secondCount <= 9)
-        {
-			secondBox.text = "0" + secondCount + ".";
-		}
-        else
-        {
-			secondBox.text = "" + secondCount + ".";
-		}
-        
-        //Display the Minute count.
-		if (minuteCount <= 9)
-        {
-			minuteBox.text = "0" + minuteCount + ":";
-		}
-        else
-        {
-			minuteBox.text = "" + minuteCount + ":";
-		}
-        */
     }
 }

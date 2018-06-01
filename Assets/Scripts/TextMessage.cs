@@ -5,24 +5,23 @@ using TMPro;
 
 public class TextMessage : MonoBehaviour
 {
-
     //Countdown purpose.
-    enum TextAnimation { Flip, FadeOut};
+    private enum TextAnimation { Flip, FadeOut };
     [SerializeField] private CarUserControl playerCarControl;
     [SerializeField] private CarAIControl[] aiCarControl;
     [SerializeField] private AudioSource getReady;
     [SerializeField] private AudioSource goAudio;
     [SerializeField] private AudioSource levelMusic;
     [SerializeField] private TextAnimation textAnimation;
-	private TimeManager lapTimer;
+    private TimeManager lapTimer;
 
     //Core function references.
     private GameObject textObject;
     private Animator textAnimator;
-	private TextMeshProUGUI messageText;
+    private TextMeshProUGUI messageText;
     private WaitForSeconds wait1s;
 
-	private void Start ()
+    private void Start ()
     {
         //Initialize core function references.
         textObject = transform.GetChild(0).gameObject;
@@ -50,10 +49,9 @@ public class TextMessage : MonoBehaviour
         }
         messageText.text = "GO!";
         goAudio.Play();
-		yield return new WaitForSeconds (0.5f);
-		levelMusic.Play();
+        yield return new WaitForSeconds (0.5f);
+        levelMusic.Play();
         textObject.SetActive(false);
-
         //Enable time lap and player & AI control.
 		lapTimer.enabled = true;
         playerCarControl.enabled = true;

@@ -1,39 +1,54 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraChange : MonoBehaviour {
+public class CameraChange : MonoBehaviour
+{
+    private enum CameraMode : int { Normal, Far, First};
 
-	public GameObject NormalCam;
-	public GameObject FarCam;
-	public GameObject FPCam;
-	public int CamMode;
+    [SerializeField] CameraMode camMode;
 
-	void Update () {
-		//if(Input.GetKeyDown("ViewMode") || Input.GetKeyDown(KeyCode.C)){
-		if(Input.GetKeyDown(KeyCode.C)){
-			if (CamMode == 2) {
-				CamMode = 0;
-			} else {
-				CamMode += 1;
-			}
-			StartCoroutine (ModeChange ());
+    private Vector3[] camPos;
+    private Vector3[] camRot;
+    private CameraStable camStab;
+    private int currentCam;
+    private int totalCam;
+
+    private void Start()
+    {
+        totalCam = transform.childCount;
+        camPos = new Vector3[totalCam];
+        camRot = new Vector3[totalCam];
+        for (int i = 0; i < totalCam; i++)
+        {
+            Transform thisCam = transform.GetChild(i);
+            camPos[i] = thisCam.localPosition;
+            camRot[i] = thisCam.localEulerAngles;
+        }
+        totalCam--;
+        camStab = GetComponent<CameraStable>();
+        currentCam = (int)camMode;
+        ChangeCam(currentCam);
+    }
+
+    private void Update ()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            currentCam += (currentCam == totalCam) ? -totalCam : 1;
+            ChangeCam(currentCam);
 		}
 	}
-
-	IEnumerator ModeChange(){
-		yield return new WaitForSeconds (0.01f);
-		if(CamMode == 0){
-			NormalCam.SetActive (true);
-			FPCam.SetActive (false);
-		}
-		if(CamMode == 1){
-			FarCam.SetActive (true);
-			NormalCam.SetActive (false);
-		}
-		if(CamMode == 2){
-			FPCam.SetActive (true);
-			FarCam.SetActive (false);
-		}
-	}
+    private void ChangeCam(int changeTo)
+    {
+        transform.localPosition = camPos[changeTo];
+        transform.localEulerAngles = camPos[changeTo];
+        if (currentCam == 2)
+        {
+            camStab.enabled = false;
+        }
+        else if (camStab.enabled == false)
+        {
+            camStab.enabled = true;
+        }
+    }
 }

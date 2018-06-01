@@ -1,19 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraStable : MonoBehaviour {
-
-	public GameObject TheCar;
-	public float CarX;
-	public float CarY;
-	public float CarZ;
-
-	void Update () {
-		CarX = TheCar.transform.eulerAngles.x;
-		CarY = TheCar.transform.eulerAngles.y;
-		CarZ = TheCar.transform.eulerAngles.z;
-
-		transform.eulerAngles = new Vector3 (CarX - CarX, CarY, CarZ - CarZ);
-	}
+public class CameraStable : MonoBehaviour
+{
+    private Transform theCar;
+    private float carX;
+    private float carY;
+    private float carZ;
+    private void Start()
+    {
+        theCar = transform.parent;
+    }
+    private void Update ()
+    {
+        carX = theCar.eulerAngles.x;
+        carY = theCar.eulerAngles.y;
+        carZ = theCar.eulerAngles.z;
+        transform.eulerAngles = new Vector3 (carX - carX, carY, carZ - carZ);
+    }
 }

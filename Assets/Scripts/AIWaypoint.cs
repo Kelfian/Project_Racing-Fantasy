@@ -1,36 +1,45 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class AIWaypoint : MonoBehaviour
 {
-	private static GameObject gotoHere;
-    private static Transform[] waypoint;
-	private static int tracker = 0;
-    private static int totalPos = 0;
+    private Vector3[] waypoint;
+    private BoxCollider waypointCollider;
+    private int tracker = 0;
+    private int totalPos = 0;
 
     private void Awake()
     {
-        gotoHere = transform.GetChild(0).gameObject;
-        totalPos = transform.childCount - 1;
+        totalPos = transform.childCount;
         Array.Resize(ref waypoint, totalPos);
-        for (int i = 1; i < transform.childCount; i++)
+        totalPos--;
+        for (int i = totalPos; i != -1; i--)
         {
-            waypoint[i-1] = transform.GetChild(i);
+            waypoint[i] = transform.GetChild(i).transform.localPosition;
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 
     private void Start()
     {
-        gotoHere.transform.localPosition = waypoint[0].transform.localPosition;
-        
+        waypointCollider = GetComponent<BoxCollider>();
+        transform.localPosition = waypoint[0];
     }
-    public static void ChangeWaypoint()
+    private IEnumerator OnTriggerEnter(Collider collision)
     {
-        tracker++;
-        if (tracker == totalPos)
+        if (collision.gameObject.tag == "CarAI00")
         {
-            tracker = 0;
+            waypointCollider.enabled = false;
+            /*tracker++;
+            if (tracker == totalPos)
+            {
+                tracker = 0;
+            }*/
+            tracker += (tracker == totalPos) ? -totalPos : 1;
+            transform.localPosition = waypoint[tracker];
+            yield return new WaitForSeconds(1);
+            waypointCollider.enabled = true;
         }
-        gotoHere.transform.localPosition = waypoint[tracker].localPosition;
     }
 }

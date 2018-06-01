@@ -2,9 +2,9 @@
 
 public class HalfPointTrigger : MonoBehaviour
 {
-	void OnTriggerEnter()
+    private void OnTriggerEnter()
     {
-		transform.parent.GetChild(0).gameObject.SetActive(true);
-		gameObject.SetActive(false);
-	}
+        transform.parent.GetChild(0).GetComponent<BoxCollider>().enabled = true;
+        gameObject.SetActive(false);
+    }
 }
