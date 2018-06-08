@@ -153,7 +153,6 @@ GameObject:
   - component: {fileID: 54245880608100060}
   - component: {fileID: 114282832226457508}
   - component: {fileID: 114862131314580744}
-  - component: {fileID: 114986789497333454}
   - component: {fileID: 114897386061905274}
   m_Layer: 0
   m_Name: CarAIkosim
@@ -2238,7 +2237,6 @@ MonoBehaviour:
   m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
   m_SpeedType: 1
-  m_Topspeed: 140
   m_RevRangeBoundary: 1
   m_SlipLimit: 0.4
   m_BrakeTorque: 20000
@@ -2379,17 +2377,6 @@ MonoBehaviour:
   maxRolloffDistance: 500
   dopplerLevel: 1
   useDoppler: 1
---- !u!114 &114986789497333454
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207169825359858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &124402870829342358
 Behaviour:
   m_ObjectHideFlags: 1

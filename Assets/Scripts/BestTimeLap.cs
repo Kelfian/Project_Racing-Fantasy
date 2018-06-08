@@ -7,7 +7,7 @@ public class BestTimeLap : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bestTimeBox;
 
     private static float bestRawTime;
-    private static int lapsDone;
+    private static int lapsDone = 0;
 
     //private static Vector3 halfLap;
     //private static Vector3 halfLapRotation;
@@ -20,11 +20,10 @@ public class BestTimeLap : MonoBehaviour
     private void Start()
     {
         //Load best lap time from PlayerPrefs.
-        bestRawTime = PlayerPrefs.GetFloat ("RawTime");
-        bestTimeBox.text = string.Format("{0:00}:", PlayerPrefs.GetInt("MinSave", 0)) +
+        bestRawTime = PlayerPrefs.GetFloat ("RawTime", 6000);
+        bestTimeBox.text = string.Format("{0:00}:", PlayerPrefs.GetInt("MinSave", 5)) +
             string.Format("{0:00}.", PlayerPrefs.GetInt("SecSave", 0))
             + PlayerPrefs.GetFloat("MiliSave", 0);
-
     }
     private void OnTriggerEnter()
     {
