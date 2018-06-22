@@ -4,12 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: [{enabled: 1, path: Assets/Scenes/MainMenu.unity, guid: 46ac68c4bf085a64a93a10253fe7b6ba},
-    {enabled: 1, path: Assets/Scenes/carSelect.unity, guid: 9b2d9f1908f0f6642bb6e00c5132afba},
-    {enabled: 1, path: Assets/Scenes/StageGurun.unity, guid: e05c9e971cac8c143b80aaf29386f5fe},
-    {enabled: 1, path: Assets/Scenes/MainMenu.unity, guid: 46ac68c4bf085a64a93a10253fe7b6ba},
-    {enabled: 1, path: Assets/Scenes/carSelect.unity, guid: 9b2d9f1908f0f6642bb6e00c5132afba},
-    {enabled: 1, path: Assets/Scenes/StageGurun.unity, guid: e05c9e971cac8c143b80aaf29386f5fe},
-    {enabled: 1, path: Assets/Scenes/StageSalju.unity, guid: f1d761c5011da114c96f94970dfea962},
-    {enabled: 1, path: Assets/Scenes/StageVolcano.unity, guid: fc3b1956b3e9139428e54e5b218f225c}]
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 46ac68c4bf085a64a93a10253fe7b6ba
+  - enabled: 1
+    path: Assets/Scenes/carSelect.unity
+    guid: 9b2d9f1908f0f6642bb6e00c5132afba
+  - enabled: 1
+    path: Assets/Scenes/trackSelect.unity
+    guid: 77571ffad6ffca74792181c35cd1da54
+  - enabled: 1
+    path: Assets/Scenes/StageGurun.unity
+    guid: e05c9e971cac8c143b80aaf29386f5fe
+  - enabled: 1
+    path: Assets/Scenes/StageGurun.unity
+    guid: e05c9e971cac8c143b80aaf29386f5fe
+  - enabled: 1
+    path: Assets/Scenes/StageSalju.unity
+    guid: f1d761c5011da114c96f94970dfea962
+  - enabled: 1
+    path: Assets/Scenes/StageVolcano.unity
+    guid: fc3b1956b3e9139428e54e5b218f225c
   m_configObjects: {}

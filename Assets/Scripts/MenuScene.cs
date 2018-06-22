@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuScene : MonoBehaviour {
 
-	public RectTransform menuContainer;
+	//public RectTransform menuContainer;
 	public static int carType; //1 = oren 2 = yellow 3 = red 4 = GHAY
-	private Vector3 desiredMenuPosition;
+	//private Vector3 desiredMenuPosition;
 
 	private void Update(){
 	
-		menuContainer.anchoredPosition = Vector3.Lerp (menuContainer.anchoredPosition, desiredMenuPosition, 0.1f);
+		//menuContainer.anchoredPosition = Vector3.Lerp (menuContainer.anchoredPosition, desiredMenuPosition, 0.1f);
 	}
 
-	private void NavigateTo(int menuIndex){
+	/*private void NavigateTo(int menuIndex){
 		switch (menuIndex) {
 		default:
 		case 0:
@@ -23,7 +23,7 @@ public class MenuScene : MonoBehaviour {
 			break;
 
 		case 1:
-			desiredMenuPosition = Vector3.left * 461;
+			desiredMenuPosition = Vector3.left * 2100;
 			break;
 
 		//case 2:
@@ -34,7 +34,7 @@ public class MenuScene : MonoBehaviour {
 		//	desiredMenuPosition = Vector3.down * 266;
 		//	break;
 		}
-	}
+	}*/
 
 	public void orenCar(){
 		carType = 1;
@@ -53,15 +53,23 @@ public class MenuScene : MonoBehaviour {
 	}
 
 	public void OnNextClick(){
-		NavigateTo (1);
+	//	NavigateTo (1);
 	}
 
 	public void OnBackClick(){
-		NavigateTo (0);
+	//	NavigateTo (0);
 	}
 
 	public void Back2MenuClick(){
 		SceneManager.LoadScene ("MainMenu");
+	}
+
+	public void Back2MenuCarSel(){
+		SceneManager.LoadScene ("carSelect");
+	}
+
+	public void Next2TrackSel(){
+		SceneManager.LoadScene ("trackSelect");
 	}
 
 	public void desertClick(){
