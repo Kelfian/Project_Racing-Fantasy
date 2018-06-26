@@ -5,7 +5,7 @@ public class PauseButton : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     private static bool isPaused = false;
 
-    public static bool IsPaused { get { return isPaused; } set { isPaused = value; } }
+    public static bool IsPaused { get { return isPaused; } }
 
     private void Update()
     {
@@ -28,15 +28,15 @@ public class PauseButton : MonoBehaviour
 
     private void Pause()
     {
-        Time.timeScale = 0f;
-        IsPaused = true;
+        isPaused = true;
         pauseMenu.SetActive(true);
+        //Time.timeScale = 0f;
     }
 
     public void Resume()
     {
-        Time.timeScale = 1f;
-        IsPaused = false;
+        isPaused = false;
         pauseMenu.SetActive(false);
+        //Time.timeScale = 1f;
     }
 }

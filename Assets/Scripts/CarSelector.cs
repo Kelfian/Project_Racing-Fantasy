@@ -8,8 +8,7 @@ public class CarSelector : MonoBehaviour {
 	public GameObject c2;
 	public GameObject c3;
 	public GameObject c4g;
-
-	public int carSelected;
+	public static int carType; //1 = oren 2 = yellow 3 = red 4 = GHAY
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +21,7 @@ public class CarSelector : MonoBehaviour {
 		c3.SetActive (false);
 		c4g.SetActive (false);
 
-		carSelected = 1;
+		carType = 1;
 	}
 
 	public void loadC2(){
@@ -31,7 +30,7 @@ public class CarSelector : MonoBehaviour {
 		c3.SetActive (false);
 		c4g.SetActive (false);
 
-		carSelected = 2;
+		carType = 2;
 	}
 
 	public void loadC3(){
@@ -40,7 +39,7 @@ public class CarSelector : MonoBehaviour {
 		c3.SetActive (true);
 		c4g.SetActive (false);
 
-		carSelected = 3;
+		carType = 3;
 	}
 
 	public void loadC4g(){
@@ -49,6 +48,6 @@ public class CarSelector : MonoBehaviour {
 		c3.SetActive (false);
 		c4g.SetActive (true);
 
-		carSelected = 4;
+		carType = 4;
 	}
 }

@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/carSelect.unity
     guid: 9b2d9f1908f0f6642bb6e00c5132afba
   - enabled: 1
+    path: Assets/Scenes/trackSelect.unity
+    guid: 77571ffad6ffca74792181c35cd1da54
+  - enabled: 1
+    path: Assets/Scenes/StageSalju.unity
+    guid: f1d761c5011da114c96f94970dfea962
+  - enabled: 1
+    path: Assets/Scenes/StageVolcano.unity
+    guid: fc3b1956b3e9139428e54e5b218f225c
+  - enabled: 1
     path: Assets/Scenes/StageGurun.unity
     guid: e05c9e971cac8c143b80aaf29386f5fe
   m_configObjects: {}

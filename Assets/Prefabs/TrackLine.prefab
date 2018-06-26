@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33998147978778970}
   - component: {fileID: 65081433515505922}
   - component: {fileID: 23197040289950232}
-  - component: {fileID: 114919819301585536}
+  - component: {fileID: 114257204802000980}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
@@ -71,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726201060968064}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 500.26, y: -0, z: 240.7}
-  m_LocalScale: {x: 235.37125, y: 0.9999987, z: 16.095251}
+  m_LocalPosition: {x: 700, y: -0, z: 200}
+  m_LocalScale: {x: 235.37125, y: 10, z: 100}
   m_Children: []
   m_Father: {fileID: 4798218461889292}
   m_RootOrder: 1
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097624616345052}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 102.09, y: 4.12, z: 415.2}
+  m_LocalPosition: {x: 200, y: 4.12, z: 650}
   m_LocalScale: {x: 1, y: 18.233719, z: 131.01694}
   m_Children: []
   m_Father: {fileID: 4798218461889292}
@@ -197,7 +197,7 @@ BoxCollider:
   m_GameObject: {fileID: 1097624616345052}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -213,18 +213,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114364553513999850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1726201060968064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf80011840eb9394f86cef0a83cb68e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114919819301585536
+--- !u!114 &114257204802000980
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -237,3 +226,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lapCounter: {fileID: 0}
   bestTimeBox: {fileID: 0}
+--- !u!114 &114364553513999850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726201060968064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf80011840eb9394f86cef0a83cb68e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
