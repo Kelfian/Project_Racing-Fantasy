@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65081433515505922}
   - component: {fileID: 23197040289950232}
   - component: {fileID: 114257204802000980}
+  - component: {fileID: 114510337594326434}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Untagged
@@ -237,3 +238,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf80011840eb9394f86cef0a83cb68e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114510337594326434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097624616345052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c3e46e2e5f10b4a97f5c8e07858788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCar: {fileID: 0}
+  finishCam: {fileID: 0}

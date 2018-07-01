@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement
+﻿    using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class BestTimeLap : MonoBehaviour
@@ -25,8 +25,8 @@ public class BestTimeLap : MonoBehaviour
         bestRawTime = PlayerPrefs.GetFloat (SceneManager.GetActiveScene().buildIndex.ToString() + " RawTime", 6000);
         bestTimeBox.text = string.Format("{0:00}:",
             PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString() + " MinSave", 5)) + string.Format("{0:00}.",
-            PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString() + " SecSave", 0)) +
-            PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex.ToString() + " MiliSave", 0);
+            PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString() + " SecSave", 0)) + string.Format("{0:0}",
+            PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex.ToString() + " MiliSave", 0));
     }
     private void OnTriggerEnter()
     {
