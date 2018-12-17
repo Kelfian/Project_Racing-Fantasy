@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: 05fb3243891be50418c108db914ab68c
-timeCreated: 1521176752
-licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: badge_interior_badge_013
     100002: badge_seatL_badge_013
@@ -1048,6 +1046,7 @@ ModelImporter:
     4300390: Mesh131_032mesh1_032Group1_032Lamborghini_Aventador1_032Model
     7400000: Default Take
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1067,6 +1066,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -1098,6 +1098,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
